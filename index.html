@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Super Agenda vocal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Chargement...</p>
+    </div>
+    <div class="container">
+        <header>
+            <div id="app-logo" class="logo-emoji">📆⏰</div>
+            <h1>Heure Actuelle</h1>
+            <div id="clock">00:00:00</div>
+        </header>
+
+        <section class="settings-input">
+            <h2> Paramètres </h2>
+            <div class="name-input-group">
+                <label for="owner-name-input"> Mon Nom pour l'Alarme :</label>
+                <input type="text" id="owner-name-input" placeholder="Entrez le nom à prononcer">
+                <button onclick="setOwnerName()"> Enregistrer le Nom </button>
+                <button onclick="testVoices()">Tester les voix locales</button>
+            </div>
+        </section>
+
+        <section class="agenda-input">
+            <h2>Ajouter un Evénement</h2>
+            <input type="datetime-local" id="event-time">
+            <input type="text" id="event-description" placeholder="Description de l'événement...">
+            <div class="button-group">
+                <button onclick="addEvent()" class="btn-plan"> Planifier </button>
+                <button onclick="startListening()" id="start-listen-btn" class="btn-mic"> Dicter l'Evénement </button>
+            </div>
+            <p id="speech-status"></p>
+        </section>
+
+        <section class="agenda-list">
+            <h2>Evénements Planifiés</h2>
+            <ul id="events-ul">
+                </ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
