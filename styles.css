@@ -46,7 +46,11 @@ header, section {
 }
 
 header {text-align: center;}
-.logo-emoji {font-size: 4rem; margin-bottom: 10px;}
+.agenda-logo {
+    width: 120px; /* Tu pourras augmenter ou diminuer ce chiffre*/
+    height: auto; /* Garde les proportions de l'image pour ne pas la déformer */
+    margin-bottom: 10px; /* Un petit espace sous le logo */
+}
 #clock {font-size: 3.5rem; font-weight: 800; color: var(--primary-color); font-variant-numeric: tabular-nums;}
 
 input, button {padding: 12px; border-radius: 8px; border: 1px solid #ddd; outline: none;}
